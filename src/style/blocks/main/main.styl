@@ -1,23 +1,82 @@
+body
+  counter-reset headers
+
+
 .screen
+
   min-height 600px
+  overflow hidden
+
+  h2.count-head
+    color #000
+    font 44px/50px $roboto-c
+    margin 0
+    position relative
+    &::before
+      position absolute
+      top -70px
+      left -50px
+      color rgba(0,0,0,.05)
+      counter-increment headers
+      content '0' counter(headers)
+      display block
+      font bold 150px/1 $roboto-c
+      letter-spacing 0.03
+      pointer-events none
+  .btn
+    border 2px solid #fff
+    border-radius 22px
+    display inline-block
+    font 14px/1 $roboto
+    letter-spacing .05em
+    padding 13px 34px
+    text-align center
+    text-transform uppercase
+  .slider-arrow
+    position absolute
+    top 50%
+    cursor pointer
+    height 86px
+    margin-top -43px
+    transition transform .3s ease
+    width 80px
+    z-index 10
+  .slick-prev
+    &:hover
+      transform translateX(20px)
+
+  .slick-next
+    &:hover
+      transform translateX(-20px)
+
   &.s0
 
-    background: linear-gradient(135deg, #ee7c8a 0%,#fbcda6 100%)
+    background url('../i/shape_bg.png') 50% 230% no-repeat, linear-gradient(135deg, #ee7c8a 0%,#fbcda6 100%)
     .screen__inner
-      padding 240px 200px 90px 180px
+      padding 228px 20px 90px
+    .screen0-bg
+      position absolute
+      bottom 0
+      left 255px
+      background url('../i/screen0_bg.png') 0 0 no-repeat
+      background-size cover
+      height 513px
+      width 901px
     .logo
       position absolute
       top 80px
-      left 180px
-      background url() 50% no-repeat
+      left 20px
+      background url('../i/logo.png') 50% no-repeat
       background-size cover
       height 44px
       width 188px
+      z-index 10
     .callback
       position absolute
       top 80px
-      right 200px
+      right 20px
       text-align right
+      z-index 10
     .tel
       color #fff
       font 30px/1 $roboto-c
@@ -25,15 +84,12 @@
         text-decoration underline
     .call-me
       background: linear-gradient(90deg, #cf3b42 0%,#e53d47 100%)
-      border-radius 22px
+      border-color rgba(255,255,255,0)
       color #fff
       display block
-      font 14px/42px $roboto
-      letter-spacing .05em
-      height 44px
       margin .8em auto 0
-      text-align center
-      text-transform uppercase
+      padding-left: 0;
+      padding-right: 0;
       width 200px
     h1
       color #fff
@@ -43,35 +99,545 @@
     p
       color #fff
       font 300 22px/1.2 $roboto
-      margim .5em 0 0
+      margin 1em 0 0
     .order
-      border 2px solid #fff
-      border-radius 22px
       color #fff
-      display inline-block
-      font 14px/1 $roboto
-      letter-spacing .05em
-      margin 2em auto 0
-      padding 13px 34px
-      text-align center
-      text-transform uppercase
+      margin 6.8em auto 0
+
+  &.s1
+    .screen__inner
+      padding 122px 0 95px 575px
+    .products
+      position absolute
+      top 135px
+      left -180px
+      height 544px
+      width 610px
+    .products-item
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      &._active
+        opacity 1 !important
+        .products-item__sticker
+          opacity 1 !important
+    .products-item__sticker
+      position absolute
+      top -60px
+      right -28px
+      height 174px
+      width 178px
+    .product1
+      background url('../i/product1.png') 0 0 no-repeat
+      background-size contain
+      .products-item__sticker
+        background url('../i/sticker1.png') 0 0 no-repeat
+        background-size cover
+    .product2
+      background url('../i/product2.png') 0 0 no-repeat
+      background-size contain
+      opacity 0
+      .products-item__sticker
+        background url('../i/sticker2.png') 0 0 no-repeat
+        background-size cover
+        opacity 0
+
+    .products-button
+      position absolute
+      top 190px
+      right -80px
+      margin 0
+      padding 0
+      width 20px
+      li
+        border-radius 50%
+        cursor pointer
+        height 20px
+        list-style-type none
+        margin 0
+        padding 0
+        position relative
+        transition background .2s ease
+        width 20px
+        &::before
+          position absolute
+          top 50%
+          left 50%
+          border 1px solid #e9e9e9
+          border-radius 50%
+          content ''
+          display block
+          height 46px
+          margin -23px 0 0 -23px
+          transition transform .3s ease
+          transform scale(0)
+          width 46px
+          z-index -1
+        & + li
+          margin 32px 0 0
+        &.red
+          background rgba(#ca4994, .2)
+          &:hover, &._active
+            background #ca4994
+        &.blue
+          background rgba(#0d6ec2, .2)
+          &:hover, &._active
+            background #0d6ec2
+        &._active
+          &::before
+            transform scale(1)
+    .count-head
+      width 520px
+      @media (max-width: 1180px)
+        width auto
+    .wysiwyg
+      margin 44px 0 0
+      p
+        color #767676
+        font 16px/22px $roboto
+        margin 0
+    .presentation-download
+      border-color #5bdbda
+      color #000
+      margin 50px 0 0
 
 
   &.s2
-    background: linear-gradient(135deg, #45c7df 0%,#18fdaa 100%)
+    background: url('../i/shape_bg.png') 50% 230% no-repeat, linear-gradient(135deg, #45c7df 0%,#18fdaa 100%)
+
+    .screen__inner
+      padding 127px 0 0 60px
+    .count-head
+      &::before
+        color rgba(255,255,255,.15)
+    .wysiwyg
+      h5
+        color #003b46
+        font bold 22px/1.2 $roboto-c
+        letter-spacing .03
+        margin 0
+        text-transform uppercase
+      p
+        color #003b46
+        font 16px/22px $roboto
+        margin 1.3em 0 0
+      ul
+        margin 40px 0 0
+        padding 0
+        > li
+          color #003b46
+          font 16px/22px $roboto
+          list-style-type none
+          margin 0
+          padding 0 0 0 27px
+          text-indent -27px
+          position relative
+          &::before
+            background #5cdbda
+            border 1px solid #fff
+            border-radius 50%
+            content ''
+            display inline-block
+            height 10px
+            margin 0 17px 0 0
+            vertical-align: 1px
+            width 10px
+          & + li
+            margin 10px 0 0
+
+    .area-slider
+      margin 30px 0 0
+      position relative
+      width 880px
+      *
+        outline none
+        user-select auto
+      .slick-list
+        overflow visible
+
+      &__prev
+        top 90px
+        background url('../i/area-p.png') 50% 0 no-repeat
+        background-size contain
+        left -160px
+        margin 0
+        @media (max-width: 1200px)
+          left -80px
+
+      &__next
+        top 90px
+        background url('../i/area-n.png') 50% 0 no-repeat
+        background-size contain
+        right -160px
+        margin 0
+        @media (max-width: 1200px)
+          right -80px
+
+      &__wrap
+        width 880px
+      &__item
+        padding 0 300px 0 0
+      .item-img
+        position absolute
+        top: -160px
+        right: -400px
+        height 679px
+        overflow hidden
+        pointer-events none
+        width 1035px
+        img
+          width 100%
+          height auto
+
+  &.s3
+    .screen__inner
+      padding 110px 0 0 515px
+      @media (max-width: 1200px)
+        padding 120px 0 0 455px
+    .count-head
+      width 485px
+    .wysiwyg
+      h5
+        color #767676
+        font bold 22px/1.2 $roboto-c
+        letter-spacing .03
+        margin 0 0 1.8em 0
+        text-transform uppercase
+      p
+        color #767676
+        font 16px/22px $roboto
+        margin 1.3em 0 0
+
+    .benefits-slider
+      margin 50px 0 0
+      padding-bottom 100px
+      position relative
+      width 485px
+      *
+        outline none
+        user-select auto
+      .slick-list
+        overflow visible
+      .slick-dots
+        font-size 0
+        margin 0
+        padding 0
+        transform: translate(92px, 50px)
+        li
+          background rgba(0,0,0,.11)
+          border-radius 50%
+          cursor pointer
+          display inline-block
+          height 12px
+          width 12px
+          & + li
+            margin 0 0 0 18px
+          &:hover, &.slick-active
+            background #5bdbda
+        button
+          display none
+
+      &__prev
+        top -6px
+        background url('../i/benefit-p.png') 50% 0 no-repeat
+        background-size contain
+        left -615px
+        margin 0
+        @media (max-width: 1200px)
+          left -475px
+
+      &__next
+        top -6px
+        background url('../i/benefit-n.png') 50% 0 no-repeat
+        background-size contain
+        right -100px
+        margin 0
+        @media (max-width: 1200px)
+          right -80px
+
+      &__item
+        padding 0 0 0 92px
+      .item-icon
+        position absolute
+        top -20px
+        left 0
+        height 78px
+        width 64px
+        img
+          height auto
+          width 100%
+      .item-img
+        position absolute
+        top: -180px
+        left: -850px
+        height 690px
+        overflow hidden
+        pointer-events none
+        width 1035px
+        img
+          width 100%
+          height auto
 
   &.s4
-    background: linear-gradient(135deg, #5c5eb5 0%,#b45bab 100%)
+    background: url('../i/shape_bg.png') 50% 230% no-repeat, linear-gradient(135deg, #5c5eb5 0%,#b45bab 100%)
 
+    .screen__inner
+      padding 120px 60px 70px
+    .count-head
+      color #fff
+      max-width 700px
+      &::before
+        color rgba(255,255,255,.15)
+    .prod-desc
+      position absolute
+      right 0
+      color #fff
+      border-color #f5d002
+      background transparent
+      margin-top 30px
+    .wysiwyg
+      margin-top 5px
+      width 440px
+      p
+        color #fff
+        font 300 22px/1.2 $roboto
+    .photo-slider
+      margin 85px 0 0
+      position relative
+      width 880px
+      *
+        outline none
+        user-select auto
+
+      &__prev
+        top 50%
+        background url('../i/area-p.png') 50% 0 no-repeat
+        background-size contain
+        left -160px
+        margin -43px 0 0
+        @media (max-width: 1200px)
+          left -80px
+
+      &__next
+        top 50%
+        background url('../i/area-n.png') 50% 0 no-repeat
+        background-size contain
+        right -160px
+        margin -43px 0 0
+        @media (max-width: 1200px)
+          right -80px
+
+      &__wrap
+        width 880px
+      &__item
+        display block
+        width 200px
+        & + .photo-slider__item
+          margin-left 27px
+        &:nth-child(4n)
+          margin-left 26px
+        img
+          border 3px solid #fff
+          border-radius 3px
+          max-width 100%
+
+  &.s5
+    .screen__inner
+      padding 120px 0
+    .count-head
+      margin 0 0 0 430px
+    .comment-slider
+      margin 20px 0 0
+      padding 0 60px 0 80px
+      position relative
+      *
+        outline none
+        user-select auto
+      &__prev
+        top 50%
+        background url('../i/benefit-p.png') 50% 0 no-repeat
+        background-size contain
+        left -100px
+        margin -43px 0 0
+        @media (max-width: 1200px)
+          left -80px
+
+      &__next
+        top 50%
+        background url('../i/benefit-n.png') 50% 0 no-repeat
+        background-size contain
+        right -100px
+        margin -43px 0 0
+        @media (max-width: 1200px)
+          right -80px
+
+      &__item
+        display flex
+        align-items center
+      .item-img
+        height 250px
+        flex-shrink 0
+        overflow hidden
+        margin 0 90px 0 0
+        width 250px
+        img
+          border-radius 50%
+          max-width 100%
+      .item-info
+        flex-grow 0
+        p
+          color #767676
+          font 16px/22px $roboto
+          margin 1.8em 0 0
+        .name
+          color #000
+          font 300 22px/1.2 $roboto
+          margin 0
+        .position
+          color #767676
+          font italic 14px/22px $roboto
+          margin .6em 0 0
   &.s6
-    background: linear-gradient(135deg, #f68c02 0%,#f6d202 100%)
+    background: url('../i/shape_bg.png') 50% 230% no-repeat, linear-gradient(135deg, #f68c02 0%,#f6d202 100%)
+    .screen__inner
+      padding 120px 0 65px
+    .count-head
+      color #fff
+      max-width 520px
+      &::before
+        color rgba(255,255,255,.15)
+    .feedback-form
+      margin 50px 0 0
+      width 444px
+      input
+        background transparent
+        border 1px solid #fff
+        color #fff
+        display inline-block
+        font 16px/1 $roboto
+        outline none
+        padding 10px 12px 11px
+        width 100%
+        &::placeholder
+          color #fff
+          font 16px/1 $roboto
+        & + input
+          margin-top 20px
+      button
+        background transparent
+        color #fff
+        cursor pointer
+        outline none
+        margin 44px 0 0
+
+  &.s7
+    min-height 500px
+    .screen__inner
+      min-height 500px
+      padding 135px 0 80px 430px
+      @media (max-width: 1200px)
+        padding-left 330px
+    .item-img
+      position absolute
+      bottom 0
+      left -100px
+      background url('../i/s7.jpg') 0 0 no-repeat
+      background-size cover
+      height 476px
+      width 470px
+      @media (max-width: 1200px)
+        left -220px
+    .wysiwyg
+      margin 50px 0 0
+      width 650px
+      @media (max-width: 1200px)
+        width auto
+      p
+        color #767676
+        font 16px/22px $roboto
+      a
+        color #5bdbda
+        text-decoration underline
+        &:hover, &:active
+          text-decoration none
+
 
 
   &__inner
     margin 0 auto
-    max-width 1400px
+    max-width 1000px
     position relative
     width 100%
 
 .footer
   background: linear-gradient(135deg, #b72c33 0%,#e53d47 100%)
+  min-height 210px
+  .screen__inner
+    display flex
+    justify-content space-between
+    padding 45px 0 0
+    *
+      flex-grow 0
+  .footer-logo
+    background url('../i/footer-logo.png') 0 0 no-repeat
+    background-size cover
+    height 31px
+    width 132px
+  .footer-social
+    margin 0
+    padding 0
+    li
+      border 1px solid #fff
+      border-radius 50%
+      display inline-block
+      height 50px
+      list-style-type none
+      margin 0
+      padding 0
+      width 50px
+      &.fb
+        background url('../i/fb.svg') 50% no-repeat
+        background-size 25px
+
+      &.vk
+        background url('../i/vk.svg') 50% no-repeat
+        background-size 25px
+
+      &.in
+        background url('../i/in.svg') 50% no-repeat
+        background-size 25px
+
+      a
+        display block
+        height 100%
+
+      & + li
+        margin 0 0 0 35px
+  .footer-block
+    display -webkit-flex
+    display -ms-flex
+    display flex
+    flex-direction column
+    justify-content space-between
+    &__title
+      color #fff
+      font 20px/1 $roboto-c
+      margin-bottom 20px
+      span
+        color #fff
+        display block
+        font  14px/1.2 $roboto
+    &__address
+      margin 0
+      padding 0
+      li
+        color #fff
+        list-style-type none
+        font 14px/1 $roboto
+        margin 0
+        padding 0
+        .city
+          font-weight bold
+          text-transform uppercase

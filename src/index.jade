@@ -10,34 +10,33 @@ html
         p Для тех, кто вам действительно дорог!
         a(href='#').order.btn Заказать
         .callback
-          a(href='#').tel +7 (495) 420-81-74
+          a(href='tel:+74954208174').tel +7 (495) 420-81-74
           a(href='#').call-me.btn Заказать звонок
+        .screen0-bg  
     .screen.s1
       .screen__inner
         .products
           ul.products-button
-            li.blue
-            li.red
-          .products-item
-            img(src='')
-            .products-item__sticker Модель стола <span>ПаучОК</span>
+            li.blue._active(data-product='1')
+            li.red(data-product='2')
+          .products-item.product1(data-product='1')
+            .products-item__sticker
             
-          .products-item
-            img(src='')
-            .products-item__sticker Модель стола <span>ТеремОК</span>
+          .products-item.product2(data-product='2')
+            .products-item__sticker
             
         .info
           h2.count-head Что такое детские интерактивные комплексы ELVATouch
           .wysiwyg
             p Уникальное решение, имеющее огромные возможности по его использованию в различных областях: от обучения и развития детей до создания и налаживания успешных бизнес-процессов. 
-          a(href='#').presentation-download  
+          a(href='#').presentation-download.btn Скачать презентацию
     .screen.s2
       .screen__inner
         h2.count-head Основные области применения
         .area-slider
-          .area-slider__prev
-          .area-slider__next
-          .area-slider__wrap
+          .area-slider__prev.slider-arrow.slick-prev
+          .area-slider__next.slider-arrow.slick-next
+          .area-slider__wrap(data-slick='{"swipe":false,"fade":true,"autoplay":true,"infinite":"true","dots":false,"arrows":true,"prevArrow":".area-slider__prev","nextArrow":".area-slider__next"}')
             .area-slider__item
               .wysiwyg
                 h5 Успешный бизнес
@@ -49,7 +48,7 @@ html
                   li Способствует увеличению прибыли
                   li Дополнительная рекламная площадка
               .item-img
-                img(src='')
+                img(src='i/s2.png')
                     
             .area-slider__item
               .wysiwyg
@@ -61,7 +60,7 @@ html
                   li Игра, способная расти и меняться вместе с ребенком
 
               .item-img
-                img(src='')
+                img(src='i/s2_2.png')
                     
             .area-slider__item
               .wysiwyg
@@ -74,19 +73,20 @@ html
                   li Развивает у детей практические и социально-коммуникативные навыки
 
               .item-img
-                img(src='')
+                img(src='i/s2_3.png')
                     
     .screen.s3
       .screen__inner
         h2.count-head Преимущества, которые  мы гарантируем
         .benefits-slider
-          .benefits-slider__prev
-          .benefits-slider__next
-          .benefits-slider__wrap
+          .benefits-slider__prev.slider-arrow.slick-prev
+          .benefits-slider__next.slider-arrow.slick-next
+          .benefits-slider__wrap(data-slick='{"swipe":false,"fade":true,"autoplay":true,"infinite":"true","dots":true,"arrows":true,"prevArrow":".benefits-slider__prev","nextArrow":".benefits-slider__next"}')
             .benefits-slider__item
               .item-icon
+                img(src='i/s3-icon.png')
               .item-img
-                img(src='')
+                img(src='i/s3.png')
               .wysiwyg
                 h5 Качественный программный продукт
                 p Мы тесно сотрудничаем с квалифицированными специалистами в различных сферах образования, развития и развлечения детей. Мы предоставляем широкий ассортимент качественных программных продуктов как для многопользовательского, так и для индивидуального применения. 
@@ -95,8 +95,9 @@ html
                 
             .benefits-slider__item
               .item-icon
+                img(src='i/s3-icon_2.png')
               .item-img
-                img(src='')
+                img(src='i/s3_2.png')
               .wysiwyg
                 h5 Безопасность использования
                 p Детские интерактивные комплексы ELVATouch продуманы до мелочей! 
@@ -104,8 +105,9 @@ html
                 
             .benefits-slider__item
               .item-icon
+                img(src='i/s3-icon_3.png')
               .item-img
-                img(src='')
+                img(src='i/s3_3.png')
               .wysiwyg
                 h5 Комфорт
                 p Интерактивные комплексы ELVATouch – это готовые к использованию решения. 
@@ -113,8 +115,9 @@ html
                 
             .benefits-slider__item
               .item-icon
+                img(src='i/s3-icon_4.png')
               .item-img
-                img(src='')
+                img(src='i/s3_4.png')
               .wysiwyg
                 h5 Индивидуальный подход
                 p Нам не все равно! Мы учтем все ваши пожелания и предложим решение, способное удовлетворить ваши требования. 
@@ -122,8 +125,9 @@ html
                 
             .benefits-slider__item
               .item-icon
+                img(src='i/s3-icon_4.png')
               .item-img
-                img(src='')
+                img(src='i/s3_4.png')
               .wysiwyg
                 h5 Разнообразие модельного ряда
                 p Мы предлагаем на выбор несколько дизайнов корпуса с разными диагоналями, вариантами программной оболочки и широким выбором цветовых решений. 
@@ -131,8 +135,9 @@ html
                 
             .benefits-slider__item
               .item-icon
+                img(src='i/s3-icon_5.png')
               .item-img
-                img(src='')
+                img(src='i/s3_5.png')
               .wysiwyg
                 h5 Качественный программный продукт
                 p Многолетний опыт и профессионализм наших сотрудников позволяет нам обеспечить высокий уровень вашего обслуживания: от получения заявки до логистики, гарантированного обслуживания и технической поддержки.
@@ -140,36 +145,50 @@ html
     .screen.s4
       .screen__inner
         h2.count-head Образовательно-развлекательные комплексы ELVATouch
+        a(href='#').prod-desc.btn Описание программных продуктов  
         .wysiwyg
           p Емкие по содержанию и областям применения! 
-        a(href='#').prod-desc Описание программных продуктов  
+        
         .photo-slider
-          .photo-slider__prev
-          .photo-slider__next
-          .photo-slider__wrap
+          .photo-slider__prev.slider-arrow.slick-prev
+          .photo-slider__next.slider-arrow.slick-next
+          .photo-slider__wrap(data-slick='{"slidesToShow":4,"slidesToScroll":2,"swipe":false,"autoplay":true,"variableWidth":true,"dots":false,"arrows":true,"prevArrow":".photo-slider__prev","nextArrow":".photo-slider__next"}')
             a(href='#').photo-slider__item
-              img(src='')
+              img(src='http://placehold.it/200x150')
               
             a(href='#').photo-slider__item
-              img(src='')
+              img(src='http://placehold.it/200x150')
               
             a(href='#').photo-slider__item
-              img(src='')
+              img(src='http://placehold.it/200x150')
               
             a(href='#').photo-slider__item
-              img(src='')
+              img(src='http://placehold.it/200x150')
+              
+            a(href='#').photo-slider__item
+              img(src='http://placehold.it/200x150')
+              
+            a(href='#').photo-slider__item
+              img(src='http://placehold.it/200x150')
+              
+            a(href='#').photo-slider__item
+              img(src='http://placehold.it/200x150')
+              
+            a(href='#').photo-slider__item
+              img(src='http://placehold.it/200x150')
+              
               
               
     .screen.s5
       .screen__inner
         h2.count-head Что говорят об интерактивных комплексах ELVATouch
         .comment-slider
-          .comment-slider__prev
-          .comment-slider__next
-          .comment-slider__wrap
+          .comment-slider__prev.slider-arrow.slick-prev
+          .comment-slider__next.slider-arrow.slick-next
+          .comment-slider__wrap(data-slick='{"swipe":false,"fade":true,"autoplay":true,"infinite":"true","dots":false,"arrows":true,"prevArrow":".comment-slider__prev","nextArrow":".comment-slider__next"}')
             .comment-slider__item
               .item-img
-                img(src='')
+                img(src='http://placehold.it/250x250')
               .item-info
                 p.name Сергей Шарапов
                 p.position Управляющий рестораном «Корчма»
@@ -177,17 +196,17 @@ html
                 
             .comment-slider__item
               .item-img
-                img(src='')
+                img(src='http://placehold.it/250x250')
               .item-info
-                p.name Сергей Шарапов
-                p.position Управляющий рестораном «Корчма»
+                p.name Алексей Осипов
+                p.position Управляющий клубом
                 p Мы предоставляем широкий ассортимент качественных программных продуктов как для многопользовательского, так и для индивидуального применения.  Мы проконсультируем вас по вопросам подбора программного обеспечения или разработаем продукт, ориентированный под ваши задачи.
                 
             .comment-slider__item
               .item-img
-                img(src='')
+                img(src='http://placehold.it/250x250')
               .item-info
-                p.name Сергей Шарапов
+                p.name Филипп Моррис
                 p.position Управляющий рестораном «Корчма»
                 p Мы предоставляем широкий ассортимент качественных программных продуктов как для многопользовательского, так и для индивидуального применения.  Мы проконсультируем вас по вопросам подбора программного обеспечения или разработаем продукт, ориентированный под ваши задачи.
                 
@@ -196,14 +215,15 @@ html
         h2.count-head Оставьте номер Вашего телефона или e-mail
         form.feedback-form
           input(type='text' name='name' placeholder='Ваше имя' required)
-          input(type='text' name='name' placeholder='Телефон')
-          input(type='text' name='name' placeholder='E-mail')
-          button Оформить заявку
+          input(type='text' name='phone' placeholder='Телефон')
+          input(type='text' name='email' placeholder='E-mail')
+          button.btn Оформить заявку
           
           
     .screen.s7
       .screen__inner
         h2.count-head Как стать нашим партнером?
+        .item-img
         .wysiwyg
           p Рынок программного обеспечения и сенсорных технологий для использования в сферах образования, развития и развлечения детей успешно развивается. Хотите зарабатывать вместе с нами? Мы открыты к взаимовыгодному сотрудничеству!
           p Если вы решили стать партнером компании ELVA Group, напишите на электронную почту <a href='mailto:info@elvatouch.ru'>info@elvatouch.ru</a> или позвоните нам по телефону <a href='tel:+74954208174'>+7 (495) 420-81-74</a>.
@@ -215,15 +235,14 @@ html
         .footer-block
           .footer-block__title ELVA Group
           ul.footer-block__address
-            li МОСКВА
+            li.city МОСКВА
             li Тел.: +7 (495) 420-81-74
             li info@elvatouch.ru
             
         .footer-block
-          .footer-block__title Эмпайр
-          .footer-block__subtitle Региональный партнер
+          .footer-block__title Эмпайр <span>Региональный партнер</span>
           ul.footer-block__address
-            li ПЕРМЬ
+            li.city ПЕРМЬ
             li Тел.: +7 (342) 259-88-44
             li info@elvatouch.ru
           
