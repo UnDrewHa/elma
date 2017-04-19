@@ -520,6 +520,13 @@ body
     background-size 100% 428px, 100%
     .screen__inner
       padding 120px 0 65px
+    .item-img
+      position absolute
+      top 95px
+      right -130px
+      background url('../i/s6-bg.png') 0 0 no-repeat
+      height 464px
+      width 605px
     .count-head
       color #fff
       max-width 520px
@@ -603,12 +610,14 @@ body
   .footer-logo
     background url('../i/footer-logo.png') 0 0 no-repeat
     background-size cover
+    display block
     height 31px
     width 132px
   .footer-social
     margin 0
     padding 0
     li
+      background-size cover
       border 1px solid #fff
       border-radius 50%
       display inline-block
@@ -617,36 +626,50 @@ body
       margin 0
       padding 0
       width 50px
+
       &.fb
-        background url('../i/fb.svg') 50% no-repeat
-        background-size 25px
+        background url('../i/ico-fb.svg') 50% no-repeat
+        &:hover
+          background-image url('../i/ico-fb0.svg')
 
       &.vk
-        background url('../i/vk.svg') 50% no-repeat
-        background-size 25px
+        background url('../i/ico-vk.svg') 50% no-repeat
+        &:hover
+          background-image url('../i/ico-vk0.svg')
 
       &.in
-        background url('../i/in.svg') 50% no-repeat
-        background-size 25px
+        background url('../i/ico-ig.svg') 50% no-repeat
+        &:hover
+          background-image url('../i/ico-ig0.svg')
 
       a
         display block
         height 100%
 
+      &:hover
+        border-color #f6d202
       & + li
         margin 0 0 0 35px
   .footer-block
     display flex
     flex-direction column
     justify-content space-between
+    a
+      color #fff
+      text-decoration none
+      &:hover, &:active
+        text-decoration underline
+
     &__title
       color #fff
       font 20px/1 $roboto-c
       margin-bottom 20px
+
       span
         color #fff
         display block
         font  14px/1.2 $roboto
+        margin 2px 0 0
     &__address
       margin 0
       padding 0
@@ -659,3 +682,5 @@ body
         .city
           font-weight bold
           text-transform uppercase
+        & + li
+          margin 5px 0 0

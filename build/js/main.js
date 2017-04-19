@@ -1894,7 +1894,8 @@ $(document).ready(function() {
 			tPrev : 'Предыдущая фотография',
 			tNext : 'Следующая фотография'
 	  },
-		closeMarkup : '<button type="button" class="mfp-close"></button>'
+		closeMarkup : '<button type="button" class="mfp-close"></button>',
+		preload: [2,2]
 	});
 
 	$('.products-button').on('click', 'li', function () {

@@ -213,6 +213,7 @@ html
     .screen.s6
       .screen__inner
         h2.count-head Оставьте номер Вашего телефона или e-mail
+        .item-img
         form.feedback-form
           input(type='text' name='name' placeholder='Ваше имя' required)
           input(type='text' name='phone' placeholder='Телефон')
@@ -231,20 +232,20 @@ html
         
     footer.footer
       .screen__inner
-        .footer-logo
+        a(href='#').footer-logo
         .footer-block
           .footer-block__title ELVA Group
           ul.footer-block__address
             li.city МОСКВА
-            li Тел.: +7 (495) 420-81-74
-            li info@elvatouch.ru
+            li: a(href='tel:+74954208174') Тел.: +7 (495) 420-81-74
+            li: a(href='mailto:info@elvatouch.ru') info@elvatouch.ru
             
         .footer-block
           .footer-block__title Эмпайр <span>Региональный партнер</span>
           ul.footer-block__address
             li.city ПЕРМЬ
-            li Тел.: +7 (342) 259-88-44
-            li info@elvatouch.ru
+            li: a(href='tel:+73422598844') Тел.: +7 (342) 259-88-44
+            li: a(href='mailto:info@elvatouch.ru') info@elvatouch.ru
           
         ul.footer-social
           li.fb: a(href='#')
