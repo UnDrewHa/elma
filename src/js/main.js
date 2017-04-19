@@ -30,7 +30,17 @@ $(document).ready(function() {
 			tNext : 'Следующая фотография'
 	  },
 		closeMarkup : '<button type="button" class="mfp-close"></button>',
-		preload: [2,2]
+		preload: [2,2],
+		callbacks: {
+	    open: function() {
+	      $('.photo-slider .slider-arrow').hide();
+				$('.photo-slider__wrap').slick('slickPause');
+	    },
+	    close: function() {
+	      $('.photo-slider .slider-arrow').show();
+				$('.photo-slider__wrap').slick('slickPlay');
+	    }
+		}
 	});
 
 	$('.products-button').on('click', 'li', function () {
