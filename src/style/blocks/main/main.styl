@@ -480,16 +480,24 @@ body
       &__wrap
         width 880px
       &__item
+        border 3px solid #fff
+        border-radius 3px
         display block
+        overflow hidden
+        height 150px
         width 200px
         & + .photo-slider__item
           margin-left 27px
         &:nth-child(4n)
           margin-left 26px
+        &:hover
+          img
+            transform scale(1.05)
         img
-          border 3px solid #fff
+
           border-radius 3px
           max-width 100%
+          transition transform .6s ease
 
   &.s5
     .screen__inner
@@ -524,6 +532,13 @@ body
       &__item
         display flex
         align-items center
+        *
+          opacity 0
+          transition none
+        &.slick-current
+          *
+            opacity 1
+            transition opacity .4s ease .05s
       .item-img
         height 250px
         flex-shrink 0
