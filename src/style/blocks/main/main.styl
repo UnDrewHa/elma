@@ -7,7 +7,7 @@ body
   display inline-block
   font 14px/1 $roboto
   letter-spacing .05em
-  padding 13px 34px
+  padding 13px 34px 12px
   text-align center
   text-transform uppercase
   transition all .15s ease
@@ -395,7 +395,7 @@ body
           .wysiwyg, .item-icon
             opacity 1
             transition all .5s ease .1s
-          .item-img
+          .item-img img
             opacity 1
             transform translateX(30px)
             transition all .3s ease .1s
@@ -416,13 +416,14 @@ body
         left: -880px
         height 690px
         overflow hidden
-        opacity 0
-        transition none
+
         pointer-events none
         width 1035px
         img
           width 100%
           height auto
+          opacity 0
+          transition none
 
 
   &.s4
