@@ -231,6 +231,8 @@ body
       &::before
         color rgba(255,255,255,.15)
     .wysiwyg
+      opacity 0
+      transition none
       h3
         color #003b46
         font bold 22px/1.2 $roboto-c
@@ -297,13 +299,23 @@ body
         width 880px
       &__item
         padding 0 300px 0 0
+        &.slick-current
+          .wysiwyg
+            opacity 1
+            transition all .5s ease .1s
+          .item-img
+            opacity 1
+            transform translateX(-30px)
+            transition all .3s ease .1s
       .item-img
         position absolute
         top: -160px
-        right: -400px
+        right: -430px
         height 679px
         overflow hidden
+        opacity 0
         pointer-events none
+        transition none
         width 1035px
         img
           width 100%
@@ -317,6 +329,8 @@ body
     .count-head
       width 485px
     .wysiwyg
+      opacity 0
+      transition none
       h3
         color #767676
         font bold 22px/1.2 $roboto-c
@@ -377,11 +391,21 @@ body
 
       &__item
         padding 0 0 0 92px
+        &.slick-current
+          .wysiwyg, .item-icon
+            opacity 1
+            transition all .5s ease .1s
+          .item-img
+            opacity 1
+            transform translateX(30px)
+            transition all .3s ease .1s
       .item-icon
         position absolute
         top -20px
         left 0
         height 78px
+        opacity 0
+        transition none
         width 64px
         img
           height auto
@@ -389,9 +413,11 @@ body
       .item-img
         position absolute
         top: -180px
-        left: -850px
+        left: -880px
         height 690px
         overflow hidden
+        opacity 0
+        transition none
         pointer-events none
         width 1035px
         img
@@ -741,6 +767,8 @@ body
       outline none
       padding 0 15px 0 12px
       width 575px
+      &:focus
+        border-color #f6d202
     textarea
       color #000
       border 1px solid #d9d9d9
@@ -750,6 +778,8 @@ body
       padding 10px 12px
       resize: none
       width 575px
+      &:focus
+        border-color #f6d202
   .btn
     background #fff
     border-color #e43d47
