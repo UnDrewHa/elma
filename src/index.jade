@@ -178,31 +178,10 @@ html
           .photo-slider__prev.slider-arrow.slick-prev
           .photo-slider__next.slider-arrow.slick-next
           .photo-slider__wrap(data-slick='{"slidesToShow":4,"slidesToScroll":2,"swipe":false,"autoplay":true,"variableWidth":true,"dots":false,"arrows":true,"prevArrow":".photo-slider__prev","nextArrow":".photo-slider__next"}')
-            a(href='i/1_b.jpg').photo-slider__item
-              img(src='http://placehold.it/200x150')
-              
-            a(href='i/2_b.jpg').photo-slider__item
-              img(src='http://placehold.it/200x150')
-              
-            a(href='i/3_b.jpg').photo-slider__item
-              img(src='http://placehold.it/200x150')
-              
-            a(href='i/4_b.jpg').photo-slider__item
-              img(src='http://placehold.it/200x150')
-              
-            a(href='i/5_b.jpg').photo-slider__item
-              img(src='http://placehold.it/200x150')
-              
-            a(href='i/6_b.jpg').photo-slider__item
-              img(src='http://placehold.it/200x150')
-              
-            a(href='i/7_b.jpg').photo-slider__item
-              img(src='http://placehold.it/200x150')
-              
-            a(href='i/8_b.jpg').photo-slider__item
-              img(src='http://placehold.it/200x150')
-              
-              
+            - var n = 1;
+            while n < 19
+              a(href='i/gallery/gall_#{n}_big.jpg').photo-slider__item
+                img(src='i/gallery/gall_#{n++}.jpg')
               
     .screen.s5
       .screen__inner
