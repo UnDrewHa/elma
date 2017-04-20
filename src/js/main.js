@@ -43,6 +43,22 @@ $(document).ready(function() {
 		}
 	});
 
+	$('.call-me').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		focus: '#m_name',
+		closeMarkup : '<button type="button" class="mfp-close"></button>',
+		callbacks: {
+			beforeOpen: function() {
+				if($(window).width() < 700) {
+					this.st.focus = false;
+				} else {
+					this.st.focus = '#m_name';
+				}
+			}
+		}
+	});
+
 	$('.products-button').on('click', 'li', function () {
 		var productNum = $(this).attr('data-product');
 

@@ -1,6 +1,16 @@
 body
   counter-reset headers
 
+.btn
+  border 2px solid #fff
+  border-radius 22px
+  display inline-block
+  font 14px/1 $roboto
+  letter-spacing .05em
+  padding 13px 34px
+  text-align center
+  text-transform uppercase
+  transition all .15s ease
 
 .screen
 
@@ -23,16 +33,6 @@ body
       font bold 150px/1 $roboto-c
       letter-spacing 0.03
       pointer-events none
-  .btn
-    border 2px solid #fff
-    border-radius 22px
-    display inline-block
-    font 14px/1 $roboto
-    letter-spacing .05em
-    padding 13px 34px
-    text-align center
-    text-transform uppercase
-    transition all .1s ease
   .slider-arrow
     position absolute
     top 50%
@@ -90,7 +90,8 @@ body
       border-color #d93b44
       color #fff
       display block
-      margin .8em auto 0
+      margin 1.3em auto 0
+      outline none
       padding-left: 0;
       padding-right: 0;
       width 200px
@@ -127,8 +128,10 @@ body
       left 0
       right 0
       bottom 0
+      transition opacity .2s ease
       &._active
         opacity 1 !important
+        transition opacity .5s ease .05s
         .products-item__sticker
           opacity 1 !important
     .products-item__sticker
@@ -221,7 +224,7 @@ body
     background-size 100% 428px, 100%
 
     .screen__inner
-      padding 127px 0 0 60px
+      padding 115px 0 0 60px
     .count-head
       &::before
         color rgba(255,255,255,.15)
@@ -258,7 +261,7 @@ body
             vertical-align: 1px
             width 10px
           & + li
-            margin 10px 0 0
+            margin 9px 0 0
 
     .area-slider
       margin 30px 0 0
@@ -306,9 +309,9 @@ body
 
   &.s3
     .screen__inner
-      padding 110px 0 0 515px
+      padding 115px 0 0 515px
       @media (max-width: 1200px)
-        padding 120px 0 0 455px
+        padding 115px 0 0 455px
     .count-head
       width 485px
     .wysiwyg
@@ -324,7 +327,7 @@ body
         margin 1.3em 0 0
 
     .benefits-slider
-      margin 50px 0 0
+      margin 72px 0 0
       padding-bottom 100px
       position relative
       width 485px
@@ -399,7 +402,7 @@ body
     background-size 100% 428px, 100%
 
     .screen__inner
-      padding 120px 60px 70px
+      padding 115px 60px 70px
     .count-head
       color #fff
       max-width 700px
@@ -462,7 +465,7 @@ body
 
   &.s5
     .screen__inner
-      padding 120px 0
+      padding 115px 0
     .count-head
       margin 0 0 0 430px
     .comment-slider
@@ -520,7 +523,7 @@ body
     background: url('../i/shape_bg.png') 50% 230% no-repeat, linear-gradient(135deg, #f68c02 0%,#f6d202 100%)
     background-size 100% 428px, 100%
     .screen__inner
-      padding 120px 0 65px
+      padding 115px 0 65px
     .item-img
       position absolute
       top 95px
@@ -549,7 +552,7 @@ body
           color #fff
           font 16px/1 $roboto
         & + input
-          margin-top 20px
+          margin-top 23px
       button
         background transparent
         color #fff
@@ -564,7 +567,7 @@ body
     min-height 500px
     .screen__inner
       min-height 500px
-      padding 135px 0 80px 430px
+      padding 115px 0 80px 430px
       @media (max-width: 1200px)
         padding-left 330px
     .item-img
@@ -578,13 +581,14 @@ body
       @media (max-width: 1200px)
         left -220px
     .wysiwyg
-      margin 50px 0 0
+      margin 45px 0 0
       width 650px
       @media (max-width: 1200px)
         width auto
       p
         color #767676
         font 16px/22px $roboto
+        margin 1.4em 0 0
       a
         color #5bdbda
         text-decoration underline
@@ -626,29 +630,22 @@ body
       list-style-type none
       margin 0
       padding 0
+      transition border-color .2s ease
       width 50px
-
-      &.fb
-        background url('../i/ico-fb.svg') 50% no-repeat
-        &:hover
-          background-image url('../i/ico-fb0.svg')
-
-      &.vk
-        background url('../i/ico-vk.svg') 50% no-repeat
-        &:hover
-          background-image url('../i/ico-vk0.svg')
-
-      &.in
-        background url('../i/ico-ig.svg') 50% no-repeat
-        &:hover
-          background-image url('../i/ico-ig0.svg')
-
+      svg
+        display block
+        height 100%
+        fill #fff
+        transition fill .2s ease
+        width 100%
       a
         display block
         height 100%
 
       &:hover
         border-color #f6d202
+        svg
+          fill #f6d202
       & + li
         margin 0 0 0 35px
   .footer-block
@@ -658,13 +655,14 @@ body
     a
       color #fff
       text-decoration none
+      transition color .2s ease
       &:hover, &:active
-        text-decoration underline
+        color #f6d202
 
     &__title
       color #fff
       font 20px/1 $roboto-c
-      margin-bottom 20px
+      margin-bottom 28px
 
       span
         color #fff
@@ -684,4 +682,79 @@ body
           font-weight bold
           text-transform uppercase
         & + li
-          margin 5px 0 0
+          margin 7px 0 0
+
+
+.modal-form
+  background #fff
+  border-top 10px solid #e43d47
+  margin 100px auto
+  padding 46px 80px 50px
+  position relative
+  width 880px
+  .mfp-close
+    top: -50px
+  &__title
+    color #000
+    font 40px/48px $roboto-c
+    margin 0
+  &__subtitle
+    color #767676
+    font 16px/22px $roboto
+    margin 1.5em 0 2em
+  &__required-text
+    color #767676
+    border-top 1px solid #ececec
+    font 13px/24px $roboto
+    margin 40px 0 0
+    padding 10px 0 0
+    span
+      color #e43d47
+  &__group
+    display flex
+    align-items flex-start
+    justify-content space-between
+    margin 20px 0 0
+    &.captcha
+      label
+        padding 0
+    img
+      display block
+      margin 0 0 15px
+
+    label
+      color #000
+      font 14px/1.2 $roboto
+      padding 15px 0 0
+      & + *
+        flex-shrink 0
+        flex-grow 0
+      span
+        color #e43d47
+    input
+      color #000
+      border 1px solid #d9d9d9
+      height 44px
+      font 16px/43px $roboto
+      outline none
+      padding 0 15px 0 12px
+      width 575px
+    textarea
+      color #000
+      border 1px solid #d9d9d9
+      height 174px
+      font 16px/22px $roboto
+      outline none
+      padding 10px 12px
+      resize: none
+      width 575px
+  .btn
+    background #fff
+    border-color #e43d47
+    color #e43d47
+    cursor pointer
+    outline none
+    margin 38px 0 0
+    &:hover, &:focus
+      background #e43d47
+      color #fff
