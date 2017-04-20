@@ -11,7 +11,7 @@
   </head>
   <body>
     <div id="callback" class="modal-form mfp-hide">
-      <form>
+      <form id="callback-form">
         <p class="modal-form__title">Обратный звонок</p>
         <p class="modal-form__subtitle">Если у вас есть какие-либо вопросы или вы хотите оформить заявку, пожалуйста, свяжитесь с нами, используя форму ниже.</p>
         <div class="modal-form__group">
@@ -40,7 +40,7 @@
       <div class="screen__inner">
         <div class="logo"></div>
         <h1>Детские интерактивные комплексы ELVATouch</h1>
-        <p>Для тех, кто вам действительно дорог!</p><a href="#" class="order btn">Заказать</a>
+        <p>Для тех, кто вам действительно дорог!</p><a href="#order" class="order btn">Заказать</a>
         <div class="callback"><a href="tel:+74954208174" class="tel">+7 (495) 420-81-74</a><a href="#callback" class="call-me btn">Заказать звонок</a></div>
         <div class="screen0-bg"> </div>
       </div>
@@ -230,14 +230,14 @@
         </div>
       </div>
     </div>
-    <div class="screen s6">
+    <div id="order" class="screen s6">
       <div class="screen__inner">
         <h2 class="count-head">Оставьте номер Вашего телефона или e-mail</h2>
         <div class="item-img"></div>
-        <form class="feedback-form">
-          <input type="text" name="name" placeholder="Ваше имя" required>
-          <input type="text" name="phone" placeholder="Телефон">
-          <input type="text" name="email" placeholder="E-mail">
+        <form id="feedback-form" class="feedback-form">
+          <input type="text" id="ff_name" name="name" placeholder="Ваше имя" required>
+          <input type="text" id="ff_phone" name="phone" placeholder="Телефон">
+          <input type="email" id="ff_email" name="email" placeholder="E-mail">
           <button class="btn">Оформить заявку</button>
         </form>
       </div>

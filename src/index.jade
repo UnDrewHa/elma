@@ -4,7 +4,7 @@ html
   include blocks/top_head
   body
     .modal-form#callback.mfp-hide
-      form
+      form#callback-form
         p.modal-form__title Обратный звонок
         p.modal-form__subtitle Если у вас есть какие-либо вопросы или вы хотите оформить заявку, пожалуйста, свяжитесь с нами, используя форму ниже.
         .modal-form__group
@@ -33,7 +33,7 @@ html
         .logo
         h1 Детские интерактивные комплексы ELVATouch
         p Для тех, кто вам действительно дорог!
-        a(href='#').order.btn Заказать
+        a(href='#order').order.btn Заказать
         .callback
           a(href='tel:+74954208174').tel +7 (495) 420-81-74
           a(href='#callback').call-me.btn Заказать звонок
@@ -214,14 +214,14 @@ html
                 p.position Управляющий рестораном «Корчма»
                 p Мы предоставляем широкий ассортимент качественных программных продуктов как для многопользовательского, так и для индивидуального применения.  Мы проконсультируем вас по вопросам подбора программного обеспечения или разработаем продукт, ориентированный под ваши задачи.
                 
-    .screen.s6
+    .screen.s6#order
       .screen__inner
         h2.count-head Оставьте номер Вашего телефона или e-mail
         .item-img
-        form.feedback-form
-          input(type='text' name='name' placeholder='Ваше имя' required)
-          input(type='text' name='phone' placeholder='Телефон')
-          input(type='text' name='email' placeholder='E-mail')
+        form.feedback-form#feedback-form
+          input(type='text' id='ff_name' name='name' placeholder='Ваше имя' required)
+          input(type='text' id='ff_phone' name='phone' placeholder='Телефон')
+          input(type='email' id='ff_email' name='email' placeholder='E-mail')
           button.btn Оформить заявку
           
           

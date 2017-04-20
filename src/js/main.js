@@ -67,4 +67,76 @@ $(document).ready(function() {
 		$(this).addClass('_active');
 		$('.products-item[data-product="' + productNum + '"]').addClass('_active');
 	});
+
+	$('.order').on('click', function (e) {
+		e.preventDefault();
+		var target = $(this).attr('href');
+
+		$("html, body").animate({ scrollTop: $(target).offset().top }, 500);
+	});
+
+	var emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+	$('#feedback-form').on('submit', function (e) {
+
+		var form = $(this),
+				requiredFields = form.find('[required]'),
+				email = form.find('#ff_email'),
+				phone = form.find('#ff_phone'),
+				hasErrors = false;
+
+		form.find('input').removeClass('_error');
+
+		requiredFields.each(function (i, item) {
+			if (!$(item).val()) {
+				$(item).addClass('_error');
+				hasErrors = true;
+			}
+		});
+
+		if (!email.val().match(emailRegExp)) {
+			email.addClass('_error');
+			hasErrors = true;
+		}
+
+		if (!email.val() && !phone.val()) {
+			email.addClass('_error');
+			phone.addClass('_error');
+			hasErrors = true;
+		}
+
+		if (hasErrors) {
+			return false;
+		}
+
+		form.find('input').removeClass('_error');
+		form.submit();
+	});
+
+
+	$('#callback-form').on('submit', function (e) {
+
+		var form = $(this),
+				requiredFields = form.find('[required]'),
+				hasErrors = false;
+
+		form.find('input').removeClass('_error');
+
+		requiredFields.each(function (i, item) {
+			if (!$(item).val()) {
+				$(item).addClass('_error');
+				hasErrors = true;
+			}
+		});
+
+		if (hasErrors) {
+			return false;
+		}
+
+		form.find('input').removeClass('_error');
+		form.submit();
+	});
+
+
 });

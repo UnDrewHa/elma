@@ -586,14 +586,19 @@ body
         background transparent
         border 1px solid #fff
         color #fff
-        display inline-block
-        font 16px/1 $roboto
+        display block
+        font 16px/22px $roboto
         outline none
-        padding 10px 12px 11px
+        height 44px
+        padding 0 12px
+        transition all .2s ease
         width 100%
         &::placeholder
           color #fff
-          font 16px/1 $roboto
+          font 16px/43px $roboto
+        &._error
+          border-color #e53d47
+          color #e53d47
         & + input
           margin-top 23px
       button
@@ -778,12 +783,15 @@ body
       color #000
       border 1px solid #d9d9d9
       height 44px
-      font 16px/43px $roboto
+      font 16px/22px $roboto
       outline none
       padding 0 15px 0 12px
       width 575px
       &:focus
         border-color #f6d202
+      &._error
+        border-color #e53d47
+        color #e53d47
     textarea
       color #000
       border 1px solid #d9d9d9
@@ -795,6 +803,9 @@ body
       width 575px
       &:focus
         border-color #f6d202
+      &._error
+        border-color #e53d47
+        color #e53d47
   .btn
     background #fff
     border-color #e43d47
