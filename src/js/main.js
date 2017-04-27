@@ -115,7 +115,7 @@ $(document).ready(function() {
 	});
 
 
-	$('#callback-form').on('submit', function (e) {
+	$('#callback-form, #login-form').on('submit', function (e) {
 
 		var form = $(this),
 				requiredFields = form.find('[required]'),
@@ -137,6 +137,8 @@ $(document).ready(function() {
 		form.find('input').removeClass('_error');
 		form.submit();
 	});
+
+
 
 
 });

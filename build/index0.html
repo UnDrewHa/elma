@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Elva</title>
+    <meta name="description" content="Elva">
+    <meta name="viewport" content="width=1280">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="callback" class="modal-form mfp-hide">
+      <form id="callback-form">
+        <p class="modal-form__title">Обратный звонок</p>
+        <p class="modal-form__subtitle">Если у вас есть какие-либо вопросы или вы хотите оформить заявку, пожалуйста, свяжитесь с нами, используя форму ниже.</p>
+        <div class="modal-form__group">
+          <label for="m_name">Ваше имя <span>*</span></label>
+          <input type="text" id="m_name" name="m_name" required>
+        </div>
+        <div class="modal-form__group"> 
+          <label for="m_phone">Телефон <span>*</span></label>
+          <input type="text" id="m_phone" name="m_phone" required>
+        </div>
+        <div class="modal-form__group">
+          <label for="m_message">Ваше сообщение</label>
+          <textarea id="m_message" name="m_message"></textarea>
+        </div>
+        <div class="modal-form__group captcha">
+          <label for="m_captcha">Введите символы <span>*</span></label>
+          <div><img src="http://placehold.it/135x70" alt="">
+            <input type="text" id="m_captcha" name="m_captcha" required>
+          </div>
+        </div>
+        <p class="modal-form__required-text"><span>*</span> поля являются обязательными для заполнения</p>
+        <button class="btn">Оставить заявку</button>
+      </form>
+    </div>
+    <div class="screen s0">
+      <div class="screen__inner">
+        <div class="logo"></div>
+        <h1>Детские интерактивные комплексы ELVATouch</h1>
+        <p>Для тех, кто вам действительно дорог!</p><a href="#order" class="order btn">Заказать</a>
+        <div class="callback"><a href="tel:+74954208174" class="tel">+7 (495) 420-81-74</a><a href="#callback" class="call-me btn">Заказать звонок</a></div>
+        <div class="screen0-bg"> </div>
+      </div>
+    </div>
+    <div class="screen s1">
+      <div class="screen__inner">
+        <div class="products">
+          <ul class="products-button">
+            <li data-product="1" class="blue _active"></li>
+            <li data-product="2" class="red"></li>
+          </ul>
+          <div data-product="1" class="products-item product1 _active">
+            <div class="products-item__sticker"></div>
+          </div>
+          <div data-product="2" class="products-item product2">
+            <div class="products-item__sticker"></div>
+          </div>
+        </div>
+        <div class="info">
+          <h2 class="count-head">Что такое детские интерактивные комплексы ELVATouch</h2>
+          <div class="wysiwyg">
+            <p>Уникальное решение, имеющее огромные возможности по его использованию в различных областях: от обучения и развития детей до создания и налаживания успешных бизнес-процессов. </p>
+          </div><a href="#" class="presentation-download btn">Скачать презентацию</a>
+        </div>
+      </div>
+    </div>
+    <div class="screen s2">
+      <div class="screen__inner">
+        <h2 class="count-head">Основные области применения</h2>
+        <div class="area-slider">
+          <div class="area-slider__prev slider-arrow slick-prev"></div>
+          <div class="area-slider__next slider-arrow slick-next"></div>
+          <div data-slick="{&quot;swipe&quot;:false,&quot;fade&quot;:true,&quot;speed&quot;:100,&quot;autoplay&quot;:true,&quot;autoplaySpeed&quot;:5000,&quot;infinite&quot;:&quot;true&quot;,&quot;dots&quot;:false,&quot;arrows&quot;:true,&quot;prevArrow&quot;:&quot;.area-slider__prev&quot;,&quot;nextArrow&quot;:&quot;.area-slider__next&quot;}" class="area-slider__wrap">
+            <div class="area-slider__item">
+              <div class="wysiwyg">
+                <h3>Успешный бизнес</h3>
+                <p>Детские интерактивные комплексы ELVATouch – идеальный инструмент повышения лояльности к вашему предприятию и налаживания успешного бизнес-процесса.</p>
+                <ul>
+                  <li>Прекрасная альтернатива или дополнение к детскому уголку</li>
+                  <li>Позволяет обеспечить комфортное пребывание</li>
+                  <li>Помогает сфокусировать родителей на ваших товарах и услугах</li>
+                  <li>Способствует увеличению прибыли</li>
+                  <li>Дополнительная рекламная площадка</li>
+                </ul>
+              </div>
+              <div class="item-img"><img src="i/s2.png"></div>
+            </div>
+            <div class="area-slider__item">
+              <div class="wysiwyg">
+                <h3>Развлечение и досуг</h3>
+                <p>Детские интерактивные комплексы ELVATouch – это возможность использования безграничного числа игровых приложений, ориентированных на разный возраст.</p>
+                <ul>
+                  <li>Новый формат обучающего развлечения – развлекая, развиваем!</li>
+                  <li>Незабываемое удовольствие от использования</li>
+                  <li>Игра, способная расти и меняться вместе с ребенком</li>
+                </ul>
+              </div>
+              <div class="item-img"><img src="i/s2_2.png"></div>
+            </div>
+            <div class="area-slider__item">
+              <div class="wysiwyg">
+                <h3>Образование и развитие детей</h3>
+                <p>Детские интерактивные комплексы ELVATouch – результат кропотливой работы с детскими психологами, методистами дошкольного образования и квалифицированными разработчиками программных продуктов</p>
+                <ul>
+                  <li>Позволяет увеличить количество используемых методик</li>
+                  <li>Делает процесс обучения эффективны и запоминающимся</li>
+                  <li>Индивидуализирует подход при групповых занятиях</li>
+                  <li>Развивает у детей практические и социально-коммуникативные навыки</li>
+                </ul>
+              </div>
+              <div class="item-img"><img src="i/s2_3.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen s3">
+      <div class="screen__inner">
+        <h2 class="count-head">Преимущества, которые  мы гарантируем</h2>
+        <div class="item-img"><img src="i/s3.png"></div>
+        <div class="benefits-slider">
+          <div class="benefits-slider__prev slider-arrow slick-prev"></div>
+          <div class="benefits-slider__next slider-arrow slick-next"></div>
+          <div data-slick="{&quot;swipe&quot;:false,&quot;fade&quot;:true,&quot;speed&quot;:100,&quot;autoplaySpeed&quot;:5000,&quot;autoplay&quot;:true,&quot;infinite&quot;:&quot;true&quot;,&quot;dots&quot;:true,&quot;arrows&quot;:true,&quot;prevArrow&quot;:&quot;.benefits-slider__prev&quot;,&quot;nextArrow&quot;:&quot;.benefits-slider__next&quot;}" class="benefits-slider__wrap">
+            <div class="benefits-slider__item">
+              <div class="item-icon"><img src="i/s3-icon_1.png"></div>
+              <div class="wysiwyg">
+                <h3>Качественный программный продукт</h3>
+                <p>Мы тесно сотрудничаем с квалифицированными специалистами в различных сферах образования, развития и развлечения детей. Мы предоставляем широкий ассортимент качественных программных продуктов как для многопользовательского, так и для индивидуального применения. </p>
+                <p>Мы проконсультируем вас по вопросам подбора программного обеспечения или разработаем продукт, ориентированный под ваши задачи.</p>
+              </div>
+            </div>
+            <div class="benefits-slider__item">
+              <div class="item-icon"><img src="i/s3-icon_2.png"></div>
+              <div class="wysiwyg">
+                <h3>Безопасность использования</h3>
+                <p>Детские интерактивные комплексы ELVATouch продуманы до мелочей! </p>
+                <p>Программная оболочка ограничивает доступ к настройкам, защищая от запуска нежелательных приложений. Корпуса изготовлены из натуральных материалов и не имеют острых углов. Встроенный сенсорный экран надежно защищен закаленным стеклом.  </p>
+              </div>
+            </div>
+            <div class="benefits-slider__item">
+              <div class="item-icon"><img src="i/s3-icon_3.png"></div>
+              <div class="wysiwyg">
+                <h3>Комфорт</h3>
+                <p>Интерактивные комплексы ELVATouch – это готовые к использованию решения. </p>
+                <p>Их применение и обслуживание не потребует дополнительных усилий с вашей стороны.</p>
+              </div>
+            </div>
+            <div class="benefits-slider__item">
+              <div class="item-icon"><img src="i/s3-icon_4.png"></div>
+              <div class="wysiwyg">
+                <h3>Индивидуальный подход</h3>
+                <p>Нам не все равно! Мы учтем все ваши пожелания и предложим решение, способное удовлетворить ваши требования. </p>
+                <p>При необходимости, предоставим демонстрационный образец и проведем тренинг по его использованию. Для нас важен каждый клиент.</p>
+              </div>
+            </div>
+            <div class="benefits-slider__item">
+              <div class="item-icon"><img src="i/s3-icon_5.png"></div>
+              <div class="wysiwyg">
+                <h3>Разнообразие модельного ряда</h3>
+                <p>Мы предлагаем на выбор несколько дизайнов корпуса с разными диагоналями, вариантами программной оболочки и широким выбором цветовых решений. </p>
+                <p>По запросу конструкции комплексов могут брендироваться.</p>
+              </div>
+            </div>
+            <div class="benefits-slider__item">
+              <div class="item-icon"><img src="i/s3-icon_6.png"></div>
+              <div class="wysiwyg">
+                <h3>Сервис</h3>
+                <p>Многолетний опыт и профессионализм наших сотрудников позволяет нам обеспечить высокий уровень вашего обслуживания: от получения заявки до логистики, гарантированного обслуживания и технической поддержки.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen s4">
+      <div class="screen__inner">
+        <h2 class="count-head">Образовательно-развлекательные комплексы ELVATouch</h2><a href="files/PO.pdf" target="_blank" class="prod-desc btn">Описание программных продуктов  </a>
+        <div class="wysiwyg">
+          <p>Емкие по содержанию и областям применения! </p>
+        </div>
+        <div class="photo-slider">
+          <div class="photo-slider__prev slider-arrow slick-prev"></div>
+          <div class="photo-slider__next slider-arrow slick-next"></div>
+          <div data-slick="{&quot;slidesToShow&quot;:4,&quot;slidesToScroll&quot;:2,&quot;swipe&quot;:false,&quot;autoplay&quot;:true,&quot;variableWidth&quot;:true,&quot;dots&quot;:false,&quot;arrows&quot;:true,&quot;prevArrow&quot;:&quot;.photo-slider__prev&quot;,&quot;nextArrow&quot;:&quot;.photo-slider__next&quot;}" class="photo-slider__wrap"><a href="i/gallery/gall_1_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_1.jpg"></a><a href="i/gallery/gall_2_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_2.jpg"></a><a href="i/gallery/gall_3_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_3.jpg"></a><a href="i/gallery/gall_4_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_4.jpg"></a><a href="i/gallery/gall_5_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_5.jpg"></a><a href="i/gallery/gall_6_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_6.jpg"></a><a href="i/gallery/gall_7_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_7.jpg"></a><a href="i/gallery/gall_8_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_8.jpg"></a><a href="i/gallery/gall_9_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_9.jpg"></a><a href="i/gallery/gall_10_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_10.jpg"></a><a href="i/gallery/gall_11_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_11.jpg"></a><a href="i/gallery/gall_12_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_12.jpg"></a><a href="i/gallery/gall_13_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_13.jpg"></a><a href="i/gallery/gall_14_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_14.jpg"></a><a href="i/gallery/gall_15_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_15.jpg"></a><a href="i/gallery/gall_16_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_16.jpg"></a><a href="i/gallery/gall_17_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_17.jpg"></a><a href="i/gallery/gall_18_big.jpg" class="photo-slider__item"><img src="i/gallery/gall_18.jpg"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen s5">
+      <div class="screen__inner">
+        <h2 class="count-head">Что говорят об интерактивных комплексах ELVATouch</h2>
+        <div class="comment-slider">
+          <div class="comment-slider__prev slider-arrow slick-prev"></div>
+          <div class="comment-slider__next slider-arrow slick-next"></div>
+          <div data-slick="{&quot;swipe&quot;:false,&quot;fade&quot;:true,&quot;autoplay&quot;:true,&quot;speed&quot;:100,&quot;autoplaySpeed&quot;:5000,&quot;infinite&quot;:&quot;true&quot;,&quot;dots&quot;:false,&quot;arrows&quot;:true,&quot;prevArrow&quot;:&quot;.comment-slider__prev&quot;,&quot;nextArrow&quot;:&quot;.comment-slider__next&quot;}" class="comment-slider__wrap">
+            <div class="comment-slider__item">
+              <div class="item-img"><img src="http://placehold.it/250x250"></div>
+              <div class="item-info">
+                <p class="name">Сергей Шарапов</p>
+                <p class="position">Управляющий рестораном «Корчма»</p>
+                <p>Мы предоставляем широкий ассортимент качественных программных продуктов как для многопользовательского, так и для индивидуального применения.  Мы проконсультируем вас по вопросам подбора программного обеспечения или разработаем продукт, ориентированный под ваши задачи.</p>
+              </div>
+            </div>
+            <div class="comment-slider__item">
+              <div class="item-img"><img src="http://placehold.it/250x250"></div>
+              <div class="item-info">
+                <p class="name">Алексей Осипов</p>
+                <p class="position">Управляющий клубом</p>
+                <p>Мы предоставляем широкий ассортимент качественных программных продуктов как для многопользовательского, так и для индивидуального применения.  Мы проконсультируем вас по вопросам подбора программного обеспечения или разработаем продукт, ориентированный под ваши задачи.</p>
+              </div>
+            </div>
+            <div class="comment-slider__item">
+              <div class="item-img"><img src="http://placehold.it/250x250"></div>
+              <div class="item-info">
+                <p class="name">Филипп Моррис</p>
+                <p class="position">Управляющий рестораном «Корчма»</p>
+                <p>Мы предоставляем широкий ассортимент качественных программных продуктов как для многопользовательского, так и для индивидуального применения.  Мы проконсультируем вас по вопросам подбора программного обеспечения или разработаем продукт, ориентированный под ваши задачи.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="order" class="screen s6">
+      <div class="screen__inner">
+        <h2 class="count-head">Оставьте номер Вашего телефона или e-mail</h2>
+        <div class="item-img"></div>
+        <form id="feedback-form" class="feedback-form">
+          <input type="text" id="ff_name" name="name" placeholder="Ваше имя" required>
+          <input type="text" id="ff_phone" name="phone" placeholder="Телефон">
+          <input type="email" id="ff_email" name="email" placeholder="E-mail">
+          <button class="btn">Оформить заявку</button>
+        </form>
+      </div>
+    </div>
+    <div class="screen s7">
+      <div class="screen__inner">
+        <h2 class="count-head">Как стать нашим партнером?</h2>
+        <div class="item-img"></div>
+        <div class="wysiwyg">
+          <p>Рынок программного обеспечения и сенсорных технологий для использования в сферах образования, развития и развлечения детей успешно развивается. Хотите зарабатывать вместе с нами? Мы открыты к взаимовыгодному сотрудничеству!</p>
+          <p>Если вы решили стать партнером компании ELVA Group, напишите на электронную почту <a href='mailto:info@elvatouch.ru'>info@elvatouch.ru</a> или позвоните нам по телефону <a href='tel:+74954208174'>+7 (495) 420-81-74</a>.</p>
+          <p>Мы предоставим всю необходимую информацию по данному вопросу.</p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="screen__inner"><a href="#" class="footer-logo"></a>
+        <div class="footer-block">
+          <div class="footer-block__title">ELVA Group</div>
+          <ul class="footer-block__address">
+            <li class="city">МОСКВА</li>
+            <li><a href="tel:+74954208174">Тел.: +7 (495) 420-81-74</a></li>
+            <li><a href="mailto:info@elvatouch.ru">info@elvatouch.ru</a></li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <div class="footer-block__title">Эмпайр <span>Региональный партнер</span></div>
+          <ul class="footer-block__address">
+            <li class="city">ПЕРМЬ</li>
+            <li><a href="tel:+73422598844">Тел.: +7 (342) 259-88-44</a></li>
+            <li><a href="mailto:info@elvatouch.ru">info@elvatouch.ru</a></li>
+          </ul>
+        </div>
+        <ul class="footer-social">
+          <li class="fb"><a href="#"><svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M21.359 16.35v-1.465c0-.702.474-.87.81-.87h2.045v-3.13H21.39c-3.131 0-3.833 2.32-3.833 3.818v1.648H15.74V20h1.832v9.116h3.648V20h2.703l.123-1.435.213-2.214h-2.901z" fill-rule="evenodd"/></svg></a></li>
+          <li class="vk"><a href="#"><svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M18.411 24.693c1.832 0 4.095.314 4.135-1.848.041-2.255-2.325-1.848-4.134-1.848v3.696zm.001-8.218v1.928c1.672 0 3.243.23 3.243-1.654 0-1.745-1.778-1.457-3.245-1.457l.002 1.183zm-3.528-3.904h6.491c2.137 0 3.955 1.088 3.953 3.287-.002 1.836-.642 2.55-1.956 3.36.112.095.865.329 1.119.458.404.208.642.417.91.699.744.787.885 1.507.885 2.744 0 2.867-2.67 4.31-5.239 4.31h-6.19l.027-14.858z" fill-rule="evenodd"/></svg></a></li>
+          <li class="in"><a href="#">
+              <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <g fill-rule="evenodd"><path d="M15.908 12.128a3.783 3.783 0 0 0-3.78 3.78v8.184a3.784 3.784 0 0 0 3.78 3.78h8.185a3.784 3.784 0 0 0 3.779-3.78v-8.185a3.783 3.783 0 0 0-3.78-3.779h-8.184zM24.093 29.5h-8.185a5.414 5.414 0 0 1-5.407-5.408v-8.185a5.413 5.413 0 0 1 5.407-5.407h8.185a5.414 5.414 0 0 1 5.407 5.407v8.185a5.415 5.415 0 0 1-5.407 5.408z"/><path d="M20 16.764A3.24 3.24 0 0 0 16.764 20 3.24 3.24 0 0 0 20 23.237 3.24 3.24 0 0 0 23.236 20 3.24 3.24 0 0 0 20 16.764m0 8.102A4.87 4.87 0 0 1 15.135 20 4.87 4.87 0 0 1 20 15.136 4.87 4.87 0 0 1 24.864 20 4.87 4.87 0 0 1 20 24.866M26.242 14.857a1.169 1.169 0 1 1-2.337 0 1.169 1.169 0 0 1 2.337 0"/></g>
+              </svg>
+              
+              
+              
+              </a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

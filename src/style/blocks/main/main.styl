@@ -1,5 +1,13 @@
+html
+  height 100%
 body
   counter-reset headers
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+.content
+  flex-grow 1
+  flex-shrink 0
 
 .btn
   border 2px solid #fff
@@ -17,6 +25,12 @@ body
 
   min-height 600px
   overflow hidden
+
+  &__inner
+    margin 0 auto
+    max-width 1000px
+    position relative
+    width 100%
 
   h2.count-head
     color #000
@@ -232,6 +246,7 @@ body
         color rgba(255,255,255,.15)
     .wysiwyg
       opacity 0
+      max-width 540px
       transition none
       h3
         color #003b46
@@ -341,6 +356,20 @@ body
         color #767676
         font 16px/22px $roboto
         margin 1.3em 0 0
+    .item-img
+      position absolute
+      top: 92px
+      left: -330px
+      height 690px
+      overflow hidden
+      opacity 1
+      transition none
+      pointer-events none
+      width 1035px
+      z-index 1
+      img
+        width 100%
+        height auto
 
     .benefits-slider
       margin 72px 0 0
@@ -395,10 +424,6 @@ body
           .wysiwyg, .item-icon
             opacity 1
             transition all .5s ease .1s
-          .item-img
-            opacity 1
-            transform translateX(30px)
-            transition all .3s ease .1s
       .item-icon
         position absolute
         top -20px
@@ -410,20 +435,6 @@ body
         img
           height auto
           width 100%
-      .item-img
-        position absolute
-        top: -180px
-        left: -880px
-        height 690px
-        overflow hidden
-        opacity 0
-        transition none
-        pointer-events none
-        width 1035px
-        img
-          width 100%
-          height auto
-
 
   &.s4
     background: url('../i/shape_bg.png') 50% 230% no-repeat, linear-gradient(135deg, #5c5eb5 0%,#b45bab 100%)
@@ -643,13 +654,77 @@ body
         &:hover, &:active
           text-decoration none
 
+  &.service
+    height 100%
+    .screen__inner
+      height 100%
+      min-height 650px
+      padding 228px 20px 90px
+    .service-bg
+      position absolute
+      bottom 0
+      left 520px
+      background url('../i/service_bg.png') 0 0 no-repeat
+      background-size contain
+      height 430px
+      width 436px
+    .login-form
+      margin 36px 0 0
+      width 520px
+      &__group
+        display flex
+        align-items center
+        justify-content space-between
+        & + .login-form__group
+          margin 9px 0 0
+      label
+        color #fff
+        display block
+        font 300 22px/1.2 $roboto
+        width 220px
+      input
+        background transparent
+        border 1px solid #fff
+        height 44px
+        outline none
+        width 300px
+        color #fff
+        display block
+        font 16px/22px $roboto
+        padding 0 12px
+        transition all .2s ease
+        &:focus
+          border-color #f6d202
+        &._error
+          border-color #e53d47
+          color #e53d47
+      .login-button
+        background transparent
+        color #fff
+        cursor pointer
+        margin 36px 0 0 220px
+        outline none
+        &:hover, &:focus, &:active
+          color #000
+          background #fff
+          border-color #fff
+
+    h1
+      color #fff
+      font 90px/1 $roboto-c
+      margin 0
+    p
+      color #fff
+      font 300 22px/1.2 $roboto
+      margin 1em 0 0
+      width 570px
+      a
+        color #bf3037
+        text-decoration underline
+        &:hover, &:active
+          text-decoration none
 
 
-  &__inner
-    margin 0 auto
-    max-width 1000px
-    position relative
-    width 100%
 
 .footer
   background: linear-gradient(135deg, #b72c33 0%,#e53d47 100%)
