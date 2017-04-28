@@ -1,13 +1,14 @@
 html
   height 100%
+
 body
   counter-reset headers
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-.content
-  flex-grow 1
-  flex-shrink 0
+  height: 100%
+
+.container
+  height 100%
+  display flex
+  flex-direction column
 
 .btn
   border 2px solid #fff
@@ -22,7 +23,6 @@ body
 
 .screen
   background-color #fff
-
   min-height 600px
   overflow hidden
 
@@ -655,9 +655,13 @@ body
           text-decoration none
 
   &.service
-    height 100%
+    display flex
+    flex-direction: column
+    flex-grow 1
+    flex-shrink 1
     .screen__inner
-      height 100%
+      flex-grow 1
+      flex-shrink: 1
       min-height 650px
       padding 228px 20px 90px
     .service-bg
